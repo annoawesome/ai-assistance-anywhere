@@ -52,6 +52,7 @@ export default function UserInput({
     <input
       type="text"
       placeholder="Type your message here..."
+      id="user-input"
       onKeyDown={(event) => onKeyDown(event, conversation, setConversation)}
     />
   );
