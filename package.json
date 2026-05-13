@@ -9,7 +9,7 @@
   "scripts": {
     "build": "vite build",
     "watch": "vite build --watch",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.2.0",
