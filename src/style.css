@@ -2,6 +2,15 @@ html,
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+
+  --neutral-1: rgb(255, 255, 255);
+  --neutral-2: rgb(230, 230, 230);
+  --neutral-3: rgb(200, 200, 200);
+  --neutral-4: rgb(140, 140, 140);
+  --neutral-5: rgb(80, 80, 80);
+  --neutral-6: rgb(50, 50, 50);
+  --neutral-7: rgb(30, 30, 30);
+  --neutral-8: rgb(15, 15, 15);
 }
 
 .message-author {
@@ -15,7 +24,7 @@ body {
 
 #conversation-panel {
   padding: 16px;
-  border: black solid 1px;
+  border: solid 1px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -26,4 +35,52 @@ body {
   margin: 16px 0;
   padding: 8px;
   font-size: 16px;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+    background-color: var(--neutral-1);
+    color: var(--neutral-7);
+  }
+
+  #conversation-panel {
+    border: var(--neutral-4) solid 1px;
+  }
+
+  #user-input {
+    background-color: var(--neutral-2);
+    border: var(--neutral-4) solid 1px;
+    color: var(--neutral-7);
+  }
+
+  #user-input:disabled {
+    color: var(--neutral-5);
+    background-color: var(--neutral-3);
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: var(--neutral-7);
+    color: var(--neutral-1);
+  }
+
+  #conversation-panel {
+    border: var(--neutral-5) solid 1px;
+  }
+
+  #user-input {
+    background-color: var(--neutral-8);
+    border: var(--neutral-5) solid 1px;
+    color: var(--neutral-1);
+  }
+
+  #user-input:disabled {
+    color: var(--neutral-2);
+    background-color: var(--neutral-6);
+  }
 }
