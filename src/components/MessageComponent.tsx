@@ -1,3 +1,4 @@
+import Markdown from "markdown-to-jsx";
 import React from "react";
 
 export default function MessageComponent({
@@ -10,7 +11,15 @@ export default function MessageComponent({
   return (
     <div className="message">
       <p className="message-author">{author}</p>
-      <p className="message-content">{content}</p>
+      <Markdown
+        className="message-content"
+        options={{
+          forceWrapper: true,
+          ignoreHTMLBlocks: true,
+        }}
+      >
+        {content}
+      </Markdown>
     </div>
   );
 }
