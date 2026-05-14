@@ -3,7 +3,7 @@ import {
   TextGenerationPipeline,
   TextStreamer,
 } from "@huggingface/transformers";
-import { Conversation } from "./model/messages.js";
+import { Conversation } from "../model/messages.js";
 
 let generator: TextGenerationPipeline;
 

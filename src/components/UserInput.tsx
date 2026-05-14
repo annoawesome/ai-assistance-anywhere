@@ -4,7 +4,7 @@ import {
   createMessage,
   pushMessageToConversation,
 } from "../model/messages.js";
-import generate from "../generatorPipeline.js";
+import generate from "../pipeline/generatorPipeline.js";
 
 function onKeyDown(
   event: React.KeyboardEvent<HTMLInputElement>,
