@@ -34,7 +34,7 @@ export default async function generate(conversation: Conversation) {
 
   // Generate a response
   const output = await pipeline(messages, {
-    max_new_tokens: 512,
+    max_new_tokens: 2048,
     do_sample: false,
     streamer: new TextStreamer(pipeline.tokenizer, {
       skip_prompt: true,
