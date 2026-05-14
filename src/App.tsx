@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <>
-      <h1>App</h1>
+      <h1>AI Assistance Anywhere</h1>
       <ConversationPanel conversation={conversation} />
       <UserInput
         conversation={conversation}
